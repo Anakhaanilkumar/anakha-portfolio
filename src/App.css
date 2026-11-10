@@ -1,0 +1,573 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #171717;
+  background: #f7f7f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f7f7f5;
+}
+
+/* GLOBAL HEADING FIX */
+
+h1,
+h2,
+h3 {
+  color: #171717;
+}
+
+/* LINKS */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* MAIN CONTAINER */
+
+.site {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 6%;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.08em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+  font-size: 0.85rem;
+}
+
+.nav-links a {
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.5;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 82vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1050px;
+  padding: 80px 0;
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #171717;
+}
+
+.hero h1 {
+  font-size: clamp(3.5rem, 8vw, 7.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+  max-width: 1000px;
+  color: #171717;
+  font-weight: 600;
+}
+
+.hero h1 span {
+  color: #171717;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+}
+
+.hero-text {
+  max-width: 620px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-top: 35px;
+  color: #555;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.button {
+  padding: 14px 22px;
+  border: 1px solid #171717;
+  font-size: 0.85rem;
+  transition: all 0.25s ease;
+}
+
+.button.primary {
+  background: #171717;
+  color: white;
+}
+
+.button.secondary:hover {
+  background: #171717;
+  color: white;
+}
+
+.scroll-note {
+  margin-top: 80px;
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  color: #777;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+  padding: 130px 0;
+  border-top: 1px solid #ddd;
+}
+
+.section-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  color: #666;
+  margin-bottom: 55px;
+}
+
+.section h2 {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  letter-spacing: -0.06em;
+  line-height: 1;
+  color: #171717;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+
+.about h2 span {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  color: #171717;
+}
+
+.about-text {
+  max-width: 550px;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #5f5f5f;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 60px;
+}
+
+.section-heading h2 {
+  color: #171717;
+}
+
+.section-heading p {
+  max-width: 300px;
+  line-height: 1.6;
+  color: #777;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  min-height: 420px;
+  background: #ecece8;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-number {
+  font-size: 0.7rem;
+  color: #777;
+}
+
+.project-category {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  font-size: 2.4rem;
+  letter-spacing: -0.05em;
+  margin-bottom: 20px;
+  color: #171717;
+}
+
+.project-description {
+  color: #666;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 25px;
+}
+
+.tech-list span,
+.skills span {
+  border: 1px solid #ccc;
+  padding: 7px 11px;
+  font-size: 0.7rem;
+}
+
+.project-arrow {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 1.5rem;
+  color: #171717;
+}
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 60px;
+  padding: 45px 0;
+  border-top: 1px solid #ddd;
+}
+
+.experience-date {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.experience-company {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.experience-item h3 {
+  font-size: 2rem;
+  letter-spacing: -0.04em;
+  margin-bottom: 15px;
+  color: #171717;
+}
+
+.experience-item p:last-child {
+  max-width: 650px;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* =========================
+   CERTIFICATIONS
+========================= */
+
+.certifications {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: #d5d5d0;
+  border: 1px solid #d5d5d0;
+}
+
+.certification {
+  background: #f7f7f5;
+  padding: 35px;
+  min-height: 180px;
+}
+
+.certification span {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: #777;
+}
+
+.certification h3 {
+  font-size: 1.5rem;
+  letter-spacing: -0.04em;
+  margin: 18px 0 8px;
+  color: #171717;
+}
+
+.certification p {
+  color: #777;
+  font-size: 0.85rem;
+}
+/* =========================
+   SKILL GROUPS
+========================= */
+
+.skill-groups {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px 80px;
+  margin-top: 55px;
+}
+
+.skill-group {
+  border-top: 1px solid #ddd;
+  padding-top: 25px;
+}
+
+.skill-group h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #171717;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills span {
+  border: 1px solid #ccc;
+  padding: 10px 14px;
+  font-size: 0.75rem;
+  color: #333;
+}
+/* =========================
+   EDUCATION
+========================= */
+
+.education-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ecece8;
+  padding: 45px;
+}
+
+.education-degree {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.education-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: #171717;
+}
+
+.education-card p:last-child {
+  color: #777;
+}
+
+.cgpa {
+  text-align: right;
+}
+
+.cgpa span {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: #888;
+}
+
+.cgpa strong {
+  font-size: 3.5rem;
+  letter-spacing: -0.08em;
+  color: #171717;
+}
+
+.cgpa small {
+  color: #888;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+  padding: 170px 0;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: clamp(3rem, 7vw, 7rem);
+  letter-spacing: -0.07em;
+  line-height: 0.95;
+  color: #171717;
+}
+
+.contact-section h2 span {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  color: #171717;
+}
+
+.email-link {
+  display: inline-block;
+  margin-top: 50px;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #171717;
+  padding-bottom: 5px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  font-size: 0.8rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  border-top: 1px solid #ddd;
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: #888;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .site {
+    padding: 0 5%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    min-height: 80vh;
+  }
+
+  .hero h1 {
+    font-size: 3.8rem;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .section {
+    padding: 90px 0;
+  }
+
+  .section-heading {
+    display: block;
+  }
+
+  .section-heading p {
+    margin-top: 20px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: 360px;
+  }
+
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .education-card {
+    display: block;
+  }
+
+  .cgpa {
+    text-align: left;
+    margin-top: 30px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+}
